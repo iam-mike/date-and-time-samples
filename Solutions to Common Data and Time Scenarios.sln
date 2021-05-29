@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Identifying Overlapping Dates and Times", "Identifying Overlapping Dates and Times\1. Identifying Overlapping Dates and Times.csproj", "{4BA2A88D-952B-4B61-8134-E98F75EC104A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{C811A56C-7476-4566-9B00-EF1B8823E635}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. Relative Time", "Relative Time\2. Relative Time.csproj", "{37632B5E-1BE1-4109-8A44-9F2E6E49EE2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Happy Birthday", "Happy Birthday\3. Happy Birthday.csproj", "{E489621A-43DF-4B00-92B2-59A0D8F74F6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Storing Dates and Times in Files", "Storing Dates and Times in Files\4. Storing Dates and Times in Files.csproj", "{3B855205-8447-4E63-A82C-BD71876150FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Storing Dates and Times in SQL Server", "Storing Dates and Times in SQL Server\5. Storing Dates and Times in SQL Server.csproj", "{4546FD2C-AAB5-42EF-91F3-128EE8725230}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. Unix Timestamp", "Unix Timestamp\6. Unix Timestamp.csproj", "{D66842FD-E45B-4326-9E60-89D155CE50F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BA2A88D-952B-4B61-8134-E98F75EC104A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BA2A88D-952B-4B61-8134-E98F75EC104A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BA2A88D-952B-4B61-8134-E98F75EC104A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BA2A88D-952B-4B61-8134-E98F75EC104A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C811A56C-7476-4566-9B00-EF1B8823E635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C811A56C-7476-4566-9B00-EF1B8823E635}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C811A56C-7476-4566-9B00-EF1B8823E635}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C811A56C-7476-4566-9B00-EF1B8823E635}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37632B5E-1BE1-4109-8A44-9F2E6E49EE2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37632B5E-1BE1-4109-8A44-9F2E6E49EE2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37632B5E-1BE1-4109-8A44-9F2E6E49EE2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37632B5E-1BE1-4109-8A44-9F2E6E49EE2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E489621A-43DF-4B00-92B2-59A0D8F74F6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E489621A-43DF-4B00-92B2-59A0D8F74F6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E489621A-43DF-4B00-92B2-59A0D8F74F6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E489621A-43DF-4B00-92B2-59A0D8F74F6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B855205-8447-4E63-A82C-BD71876150FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B855205-8447-4E63-A82C-BD71876150FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B855205-8447-4E63-A82C-BD71876150FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B855205-8447-4E63-A82C-BD71876150FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4546FD2C-AAB5-42EF-91F3-128EE8725230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4546FD2C-AAB5-42EF-91F3-128EE8725230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4546FD2C-AAB5-42EF-91F3-128EE8725230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4546FD2C-AAB5-42EF-91F3-128EE8725230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D66842FD-E45B-4326-9E60-89D155CE50F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D66842FD-E45B-4326-9E60-89D155CE50F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D66842FD-E45B-4326-9E60-89D155CE50F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D66842FD-E45B-4326-9E60-89D155CE50F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F970A52-1022-4492-B233-B8E824658405}
+	EndGlobalSection
+EndGlobal
