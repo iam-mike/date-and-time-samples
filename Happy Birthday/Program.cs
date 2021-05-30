@@ -11,7 +11,40 @@ namespace Happy_Birthday
         {
             var speaker = GetSpeaker();
 
+            var age = GetSpeakerAge(speaker);
+            Console.WriteLine(age);
+            Console.WriteLine(GetDaysUntilBirthday(speaker));
         }
+
+        public static int GetSpeakerAge(Speaker speaker)
+        {
+            var today = DateTimeOffset.UtcNow;
+
+            var age = today.Year - speaker.Birthday.Year;
+
+            if (speaker.Birthday.Date >= today.Date.AddYears(-age))
+            {
+                age--;
+            };
+            return age;
+        }
+
+        public static int GetDaysUntilBirthday(Speaker speaker)
+        {
+            var today = DateTime.UtcNow.Date;
+            var birthday = new DateTime(today.Year, speaker.Birthday.Month, 1);
+
+            birthday = birthday.AddDays(speaker.Birthday.Day - 1);
+
+            if (birthday < today)
+            {
+                birthday.AddYears(1);
+            }
+
+            return (int)(birthday - today).TotalDays;
+//            birthday.da
+        }
+
 
         public static Speaker GetSpeaker()
         {

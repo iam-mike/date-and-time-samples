@@ -1,6 +1,6 @@
 ﻿using Shared;
 using System;
-
+using System.Linq;
 using static System.Console;
 
 namespace Relative_Time
@@ -19,6 +19,72 @@ namespace Relative_Time
             WriteLine($"Sessions for: {speaker.Name}");
             WriteLine("-----------------------------");
 
+            foreach (var session in speaker.Sessions)
+            {
+                Console.WriteLine(session.Title);
+                Console.WriteLine($"Starts: {session.ScheduledAt}");
+                Console.WriteLine($"Ends: {session.ScheduledAt.Add(session.Length)}");
+
+                var earlierSessions = DoesSpeakerHaveEarlierSessions(speaker, session);
+                var laterSessions = DoesSpeakerHaveLaterSessions(speaker, session);
+                var coffeeBreak = GetTimeUntilNextSession(speaker, session);
+                var submissionTime = TimeSinceSubmission(session);
+
+
+                Console.WriteLine($"EarlierSessions: {earlierSessions}");
+                Console.WriteLine($"Later Sessions: {laterSessions}");
+                Console.WriteLine($"Coffee Break: {coffeeBreak}");
+                Console.WriteLine($"Time since submission: {Math.Abs(submissionTime.TotalDays)}");
+
+
+                if (coffeeBreak != TimeSpan.MinValue
+                    && session.ScheduledAt.Add(session.Length).DayOfYear != 
+                    session.ScheduledAt.Add(session.Length).Add(coffeeBreak).DayOfYear)
+                {
+                    Console.WriteLine("------------ NO MORE SESSIONS TODAY ------------");
+                }
+
+                Console.ReadLine();
+                Console.WriteLine();
+            }
+
+        }
+
+        private static TimeSpan TimeSinceSubmission(Session session)
+        {
+            var timeSince = session.SubmittedAt - DateTimeOffset.UtcNow.ToOffset(session.SubmittedAt.Offset);
+
+            return timeSince;
+        }
+
+        private static TimeSpan GetTimeUntilNextSession(Speaker speaker, Session currentSession)
+        {
+            var nextSession = speaker.Sessions.OrderBy(s => s.ScheduledAt)
+                .FirstOrDefault(s => s.Id != currentSession.Id &
+                s.ScheduledAt >= currentSession.ScheduledAt);
+
+            if(nextSession == null)
+            {
+                return TimeSpan.MinValue;
+            }
+
+            return nextSession.ScheduledAt - currentSession.ScheduledAt.Add(currentSession.Length);
+        }
+
+        private static bool DoesSpeakerHaveEarlierSessions(Speaker speaker, Session currentSession)
+        {
+            return speaker.Sessions.Any(
+                session => session.Id != currentSession.Id &&
+                session.ScheduledAt.CompareTo(currentSession.ScheduledAt) == (int)DateComparison.Earlier
+                );
+        }
+
+        private static bool DoesSpeakerHaveLaterSessions(Speaker speaker, Session currentSession)
+        {
+            return speaker.Sessions.Any(
+                session => session.Id != currentSession.Id &&
+                session.ScheduledAt.CompareTo(currentSession.ScheduledAt) == (int)DateComparison.Later
+                );
         }
 
         public static Speaker GetSpeaker()
@@ -61,6 +127,35 @@ namespace Relative_Time
             };
 
             return speaker;
+        }
+        private static Session GetOverlappingSessions(Speaker speaker, Session currentSession)
+        {
+            var start = currentSession.ScheduledAt;
+            var end = currentSession.ScheduledAt.Add(currentSession.Length);
+
+            foreach (var session in speaker.Sessions)
+            {
+                if (session.Id == currentSession.Id) continue;
+
+                if (session.ScheduledAt > start
+                    && session.ScheduledAt < end)
+                {
+                    return session;
+                }
+                if (session.ScheduledAt.Add(session.Length) > start
+                    && session.ScheduledAt.Add(session.Length) < end)
+                {
+                    return session;
+                }
+
+            }
+            return null;
+        }
+        public enum DateComparison
+        {
+            Earlier = -1,
+            Later = 1,
+            TheSame = 0
         }
     }
 }

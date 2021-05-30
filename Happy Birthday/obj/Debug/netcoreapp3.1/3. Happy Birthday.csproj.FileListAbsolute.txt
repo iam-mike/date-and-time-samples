@@ -1,0 +1,16 @@
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\obj\Debug\netcoreapp3.1\3. Happy Birthday.csprojAssemblyReference.cache
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\obj\Debug\netcoreapp3.1\3. Happy Birthday.AssemblyInfoInputs.cache
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\obj\Debug\netcoreapp3.1\3. Happy Birthday.AssemblyInfo.cs
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\obj\Debug\netcoreapp3.1\3. Happy Birthday.csproj.CoreCompileInputs.cache
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\bin\Debug\netcoreapp3.1\3. Happy Birthday.exe
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\bin\Debug\netcoreapp3.1\3. Happy Birthday.deps.json
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\bin\Debug\netcoreapp3.1\3. Happy Birthday.runtimeconfig.json
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\bin\Debug\netcoreapp3.1\3. Happy Birthday.runtimeconfig.dev.json
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\bin\Debug\netcoreapp3.1\3. Happy Birthday.dll
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\bin\Debug\netcoreapp3.1\3. Happy Birthday.pdb
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\bin\Debug\netcoreapp3.1\Shared.dll
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\bin\Debug\netcoreapp3.1\Shared.pdb
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\obj\Debug\netcoreapp3.1\3. Happy Birthday.csproj.CopyComplete
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\obj\Debug\netcoreapp3.1\3. Happy Birthday.dll
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\obj\Debug\netcoreapp3.1\3. Happy Birthday.pdb
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Happy Birthday\obj\Debug\netcoreapp3.1\3. Happy Birthday.genruntimeconfig.cache

@@ -1,0 +1,16 @@
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\bin\Debug\netcoreapp3.1\2. Relative Time.exe
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\bin\Debug\netcoreapp3.1\2. Relative Time.deps.json
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\bin\Debug\netcoreapp3.1\2. Relative Time.runtimeconfig.json
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\bin\Debug\netcoreapp3.1\2. Relative Time.runtimeconfig.dev.json
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\bin\Debug\netcoreapp3.1\2. Relative Time.dll
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\bin\Debug\netcoreapp3.1\2. Relative Time.pdb
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\bin\Debug\netcoreapp3.1\Shared.dll
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\bin\Debug\netcoreapp3.1\Shared.pdb
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\obj\Debug\netcoreapp3.1\2. Relative Time.csprojAssemblyReference.cache
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\obj\Debug\netcoreapp3.1\2. Relative Time.AssemblyInfoInputs.cache
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\obj\Debug\netcoreapp3.1\2. Relative Time.AssemblyInfo.cs
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\obj\Debug\netcoreapp3.1\2. Relative Time.csproj.CoreCompileInputs.cache
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\obj\Debug\netcoreapp3.1\2. Relative Time.csproj.CopyComplete
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\obj\Debug\netcoreapp3.1\2. Relative Time.dll
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\obj\Debug\netcoreapp3.1\2. Relative Time.pdb
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Relative Time\obj\Debug\netcoreapp3.1\2. Relative Time.genruntimeconfig.cache
