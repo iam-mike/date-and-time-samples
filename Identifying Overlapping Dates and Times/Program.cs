@@ -7,6 +7,51 @@ namespace Identifying_Overlapping_Dates_and_Times
     {
         static void Main(string[] args)
         {
+            var speaker = GetSpeaker();
+
+            Console.WriteLine($"Sessions for: {speaker.Name}");
+            Console.WriteLine("---------------------");
+
+            foreach (var session in speaker.Sessions)
+            {
+                Console.WriteLine(session.Title);
+                Console.WriteLine($"Starts: {session.ScheduledAt}");
+                Console.WriteLine($"Ends: {session.ScheduledAt.Add(session.Length)}");
+
+                var overlap = GetOverlappingSessions(speaker, session);
+
+                if (overlap != null)
+                {
+                    PrintWarning($"Overlapping with {overlap.Title}");
+                }
+                Console.ReadLine();
+                Console.WriteLine();
+
+            }
+        }
+
+        private static Session GetOverlappingSessions(Speaker speaker, Session currentSession)
+        {
+            var start = currentSession.ScheduledAt;
+            var end = currentSession.ScheduledAt.Add(currentSession.Length);
+
+            foreach (var session in speaker.Sessions)
+            {
+                if (session.Id == currentSession.Id) continue;
+
+                if(session.ScheduledAt > start 
+                    && session.ScheduledAt < end)
+                {
+                    return session;
+                }
+                if (session.ScheduledAt.Add(session.Length) > start 
+                    && session.ScheduledAt.Add(session.Length) < end)
+                {
+                    return session;
+                }
+
+            }
+            return null;
         }
 
         public static void PrintWarning(string message)

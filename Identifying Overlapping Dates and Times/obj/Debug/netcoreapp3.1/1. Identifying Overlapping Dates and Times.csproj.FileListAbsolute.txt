@@ -1,0 +1,16 @@
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\bin\Debug\netcoreapp3.1\1. Identifying Overlapping Dates and Times.exe
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\bin\Debug\netcoreapp3.1\1. Identifying Overlapping Dates and Times.deps.json
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\bin\Debug\netcoreapp3.1\1. Identifying Overlapping Dates and Times.runtimeconfig.json
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\bin\Debug\netcoreapp3.1\1. Identifying Overlapping Dates and Times.runtimeconfig.dev.json
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\bin\Debug\netcoreapp3.1\1. Identifying Overlapping Dates and Times.dll
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\bin\Debug\netcoreapp3.1\1. Identifying Overlapping Dates and Times.pdb
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\bin\Debug\netcoreapp3.1\Shared.dll
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\bin\Debug\netcoreapp3.1\Shared.pdb
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\obj\Debug\netcoreapp3.1\1. Identifying Overlapping Dates and Times.csprojAssemblyReference.cache
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\obj\Debug\netcoreapp3.1\1. Identifying Overlapping Dates and Times.AssemblyInfoInputs.cache
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\obj\Debug\netcoreapp3.1\1. Identifying Overlapping Dates and Times.AssemblyInfo.cs
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\obj\Debug\netcoreapp3.1\1. Identifying Overlapping Dates and Times.csproj.CoreCompileInputs.cache
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\obj\Debug\netcoreapp3.1\1. Identifying Overlapping Dates and Times.csproj.CopyComplete
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\obj\Debug\netcoreapp3.1\1. Identifying Overlapping Dates and Times.dll
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\obj\Debug\netcoreapp3.1\1. Identifying Overlapping Dates and Times.pdb
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Identifying Overlapping Dates and Times\obj\Debug\netcoreapp3.1\1. Identifying Overlapping Dates and Times.genruntimeconfig.cache
