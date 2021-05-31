@@ -1,0 +1,16 @@
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\bin\Debug\netcoreapp3.1\4. Storing Dates and Times in Files.exe
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\bin\Debug\netcoreapp3.1\4. Storing Dates and Times in Files.deps.json
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\bin\Debug\netcoreapp3.1\4. Storing Dates and Times in Files.runtimeconfig.json
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\bin\Debug\netcoreapp3.1\4. Storing Dates and Times in Files.runtimeconfig.dev.json
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\bin\Debug\netcoreapp3.1\4. Storing Dates and Times in Files.dll
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\bin\Debug\netcoreapp3.1\4. Storing Dates and Times in Files.pdb
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\bin\Debug\netcoreapp3.1\Shared.dll
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\bin\Debug\netcoreapp3.1\Shared.pdb
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\obj\Debug\netcoreapp3.1\4. Storing Dates and Times in Files.csprojAssemblyReference.cache
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\obj\Debug\netcoreapp3.1\4. Storing Dates and Times in Files.AssemblyInfoInputs.cache
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\obj\Debug\netcoreapp3.1\4. Storing Dates and Times in Files.AssemblyInfo.cs
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\obj\Debug\netcoreapp3.1\4. Storing Dates and Times in Files.csproj.CoreCompileInputs.cache
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\obj\Debug\netcoreapp3.1\4. Storing Dates and Times in Files.csproj.CopyComplete
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\obj\Debug\netcoreapp3.1\4. Storing Dates and Times in Files.dll
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\obj\Debug\netcoreapp3.1\4. Storing Dates and Times in Files.pdb
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in Files\obj\Debug\netcoreapp3.1\4. Storing Dates and Times in Files.genruntimeconfig.cache

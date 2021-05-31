@@ -1,5 +1,6 @@
 ﻿using Shared;
 using System;
+using System.IO;
 
 namespace Storing_Dates_and_Times_in_Files
 {
@@ -8,6 +9,17 @@ namespace Storing_Dates_and_Times_in_Files
         static void Main(string[] args)
         {
             var speaker = GetSpeaker();
+
+            var csv = "Title,Speaker,Length,ScjeduledAt"+ Environment.NewLine;
+
+            var userOffset = TimeSpan.FromHours(-11);
+
+            foreach(var session in speaker.Sessions)
+            {
+                csv += $"{session.Title},{speaker.Name},{session.Length},{session.ScheduledAt.ToOffset(userOffset):O}{Environment.NewLine}";
+            }
+
+            File.WriteAllText($"{speaker.Name}.csv", csv);
         }
 
         public static Speaker GetSpeaker()
