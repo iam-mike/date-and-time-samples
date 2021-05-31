@@ -1,0 +1,12 @@
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in SQL Server\bin\Debug\netcoreapp2.1\5. Storing Dates and Times in SQL Server.deps.json
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in SQL Server\bin\Debug\netcoreapp2.1\5. Storing Dates and Times in SQL Server.runtimeconfig.json
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in SQL Server\bin\Debug\netcoreapp2.1\5. Storing Dates and Times in SQL Server.runtimeconfig.dev.json
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in SQL Server\bin\Debug\netcoreapp2.1\5. Storing Dates and Times in SQL Server.dll
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in SQL Server\bin\Debug\netcoreapp2.1\5. Storing Dates and Times in SQL Server.pdb
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in SQL Server\obj\Debug\netcoreapp2.1\5. Storing Dates and Times in SQL Server.csprojAssemblyReference.cache
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in SQL Server\obj\Debug\netcoreapp2.1\5. Storing Dates and Times in SQL Server.AssemblyInfoInputs.cache
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in SQL Server\obj\Debug\netcoreapp2.1\5. Storing Dates and Times in SQL Server.AssemblyInfo.cs
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in SQL Server\obj\Debug\netcoreapp2.1\5. Storing Dates and Times in SQL Server.csproj.CoreCompileInputs.cache
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in SQL Server\obj\Debug\netcoreapp2.1\5. Storing Dates and Times in SQL Server.dll
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in SQL Server\obj\Debug\netcoreapp2.1\5. Storing Dates and Times in SQL Server.pdb
+C:\Users\Mikew\source\repos\iam-mike\date-and-time-samples\Storing Dates and Times in SQL Server\obj\Debug\netcoreapp2.1\5. Storing Dates and Times in SQL Server.genruntimeconfig.cache

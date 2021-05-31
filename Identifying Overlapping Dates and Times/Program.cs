@@ -1,6 +1,8 @@
 ﻿using Shared;
 using System;
 
+using static System.Console;
+
 namespace Identifying_Overlapping_Dates_and_Times
 {
     class Program
@@ -9,48 +11,50 @@ namespace Identifying_Overlapping_Dates_and_Times
         {
             var speaker = GetSpeaker();
 
-            Console.WriteLine($"Sessions for: {speaker.Name}");
-            Console.WriteLine("---------------------");
+            WriteLine($"Sessions for: {speaker.Name}");
+            WriteLine("------------------------------");
 
-            foreach (var session in speaker.Sessions)
+            foreach(var session in speaker.Sessions)
             {
-                Console.WriteLine(session.Title);
-                Console.WriteLine($"Starts: {session.ScheduledAt}");
-                Console.WriteLine($"Ends: {session.ScheduledAt.Add(session.Length)}");
+                WriteLine(session.Title);
+                WriteLine($"Starts: {session.ScheduledAt}");
+                WriteLine($"Ends:   {session.ScheduledAt.Add(session.Length)}");
 
-                var overlap = GetOverlappingSessions(speaker, session);
+                var overlappingSession = GetOverlappingSession(speaker, session);
 
-                if (overlap != null)
+                if(overlappingSession != null)
                 {
-                    PrintWarning($"Overlapping with {overlap.Title}");
+                   PrintWarning($"OVERLAPPING WITH {overlappingSession.Title}!");
                 }
-                Console.ReadLine();
-                Console.WriteLine();
 
+                ReadLine();
+                WriteLine();
             }
         }
 
-        private static Session GetOverlappingSessions(Speaker speaker, Session currentSession)
+        public static Session GetOverlappingSession(Speaker speaker, Session currentSession)
         {
             var start = currentSession.ScheduledAt;
             var end = currentSession.ScheduledAt.Add(currentSession.Length);
 
-            foreach (var session in speaker.Sessions)
+            foreach(var session in speaker.Sessions)
             {
                 if (session.Id == currentSession.Id) continue;
 
-                if(session.ScheduledAt > start 
-                    && session.ScheduledAt < end)
+                if(session.ScheduledAt > start &&
+                    session.ScheduledAt < end)
                 {
-                    return session;
-                }
-                if (session.ScheduledAt.Add(session.Length) > start 
-                    && session.ScheduledAt.Add(session.Length) < end)
-                {
-                    return session;
+                    return session; // Overlapping session!
                 }
 
+                if(session.ScheduledAt.Add(session.Length) > start &&
+                    session.ScheduledAt.Add(session.Length) < end)
+                {
+                    return session; // Overlapping session!
+
+                }
             }
+
             return null;
         }
 

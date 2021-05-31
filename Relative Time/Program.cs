@@ -9,11 +9,6 @@ namespace Relative_Time
     {
         static void Main(string[] args)
         {
-            //var a = new DateTimeOffset(2016, 03, 28, 00, 01, 00, TimeSpan.FromHours(1));
-            //var b = new DateTimeOffset(2016, 02, 29, 00, 01, 00, TimeSpan.FromHours(1));
-
-            //WriteLine(a.CompareTo(b));
-
             var speaker = GetSpeaker();
 
             WriteLine($"Sessions for: {speaker.Name}");
@@ -21,47 +16,55 @@ namespace Relative_Time
 
             foreach (var session in speaker.Sessions)
             {
-                Console.WriteLine(session.Title);
-                Console.WriteLine($"Starts: {session.ScheduledAt}");
-                Console.WriteLine($"Ends: {session.ScheduledAt.Add(session.Length)}");
+                WriteLine($"{session.Title}");
+                WriteLine($"Starts: {session.ScheduledAt}");
+                WriteLine($"Ends:   {session.ScheduledAt.Add(session.Length)}");
 
-                var earlierSessions = DoesSpeakerHaveEarlierSessions(speaker, session);
-                var laterSessions = DoesSpeakerHaveLaterSessions(speaker, session);
-                var coffeeBreak = GetTimeUntilNextSession(speaker, session);
-                var submissionTime = TimeSinceSubmission(session);
+                var doesSpeakerHaveEarlierSessions = DoesSpeakerHaveEalierSessions(speaker, session);
+                var doesSpeakerHaveLaterSessions = DoesSpeakerHaveLaterSessions(speaker, session);
+                var timeUntilNextSession = GetTimeUntilNextSession(speaker, session);
+                var timeSinceSubmission = TimeSinceSubmission(session);
 
+                WriteLine($"Earlier sessions: {doesSpeakerHaveEarlierSessions}");
+                WriteLine($"Later sessions: {doesSpeakerHaveLaterSessions}");
+                WriteLine($"Time until next session: {timeUntilNextSession}");
 
-                Console.WriteLine($"EarlierSessions: {earlierSessions}");
-                Console.WriteLine($"Later Sessions: {laterSessions}");
-                Console.WriteLine($"Coffee Break: {coffeeBreak}");
-                Console.WriteLine($"Time since submission: {Math.Abs(submissionTime.TotalDays)}");
+                WriteLine($"Submitted at: {session.SubmittedAt}");
+                WriteLine($"Days since submission: {Math.Abs(timeSinceSubmission.TotalDays)}"); 
 
-
-                if (coffeeBreak != TimeSpan.MinValue
-                    && session.ScheduledAt.Add(session.Length).DayOfYear != 
-                    session.ScheduledAt.Add(session.Length).Add(coffeeBreak).DayOfYear)
+                if(timeUntilNextSession != TimeSpan.MinValue &&
+                    session.ScheduledAt.Add(session.Length).DayOfYear !=
+                    session.ScheduledAt.Add(session.Length).Add(timeUntilNextSession).DayOfYear)
                 {
-                    Console.WriteLine("------------ NO MORE SESSIONS TODAY ------------");
+                    WriteLine("-------------- NO MORE SESSIONS TODAY ---------------");
                 }
 
-                Console.ReadLine();
-                Console.WriteLine();
+                WriteLine();
+                ReadLine();
             }
-
         }
 
-        private static TimeSpan TimeSinceSubmission(Session session)
+        public static bool DoesSpeakerHaveEalierSessions(Speaker speaker, Session currentSession)
         {
-            var timeSince = session.SubmittedAt - DateTimeOffset.UtcNow.ToOffset(session.SubmittedAt.Offset);
-
-            return timeSince;
+            return speaker.Sessions.Any(
+                session => session.Id != currentSession.Id &&
+                session.ScheduledAt.CompareTo(currentSession.ScheduledAt) == (int)DateComparison.Earlier
+            );
         }
 
-        private static TimeSpan GetTimeUntilNextSession(Speaker speaker, Session currentSession)
+        public static bool DoesSpeakerHaveLaterSessions(Speaker speaker, Session currentSession)
         {
-            var nextSession = speaker.Sessions.OrderBy(s => s.ScheduledAt)
-                .FirstOrDefault(s => s.Id != currentSession.Id &
-                s.ScheduledAt >= currentSession.ScheduledAt);
+            return speaker.Sessions.Any(
+                session => session.Id != currentSession.Id &&
+                session.ScheduledAt.CompareTo(currentSession.ScheduledAt) == (int)DateComparison.Later
+            );
+        }
+
+        public static TimeSpan GetTimeUntilNextSession(Speaker speaker, Session currentSession)
+        {
+            var nextSession = speaker.Sessions.OrderBy(session => session.ScheduledAt)
+                .FirstOrDefault(session => session.Id != currentSession.Id &&
+                session.ScheduledAt >= currentSession.ScheduledAt);
 
             if(nextSession == null)
             {
@@ -71,21 +74,15 @@ namespace Relative_Time
             return nextSession.ScheduledAt - currentSession.ScheduledAt.Add(currentSession.Length);
         }
 
-        private static bool DoesSpeakerHaveEarlierSessions(Speaker speaker, Session currentSession)
+        public static TimeSpan TimeSinceSubmission(Session session)
         {
-            return speaker.Sessions.Any(
-                session => session.Id != currentSession.Id &&
-                session.ScheduledAt.CompareTo(currentSession.ScheduledAt) == (int)DateComparison.Earlier
-                );
+            var timeSinceSubmission = session.SubmittedAt - DateTimeOffset.UtcNow.ToOffset(session.SubmittedAt.Offset);
+
+            return timeSinceSubmission;
         }
 
-        private static bool DoesSpeakerHaveLaterSessions(Speaker speaker, Session currentSession)
-        {
-            return speaker.Sessions.Any(
-                session => session.Id != currentSession.Id &&
-                session.ScheduledAt.CompareTo(currentSession.ScheduledAt) == (int)DateComparison.Later
-                );
-        }
+
+
 
         public static Speaker GetSpeaker()
         {
@@ -128,29 +125,7 @@ namespace Relative_Time
 
             return speaker;
         }
-        private static Session GetOverlappingSessions(Speaker speaker, Session currentSession)
-        {
-            var start = currentSession.ScheduledAt;
-            var end = currentSession.ScheduledAt.Add(currentSession.Length);
 
-            foreach (var session in speaker.Sessions)
-            {
-                if (session.Id == currentSession.Id) continue;
-
-                if (session.ScheduledAt > start
-                    && session.ScheduledAt < end)
-                {
-                    return session;
-                }
-                if (session.ScheduledAt.Add(session.Length) > start
-                    && session.ScheduledAt.Add(session.Length) < end)
-                {
-                    return session;
-                }
-
-            }
-            return null;
-        }
         public enum DateComparison
         {
             Earlier = -1,

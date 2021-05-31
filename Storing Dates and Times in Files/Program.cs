@@ -10,7 +10,7 @@ namespace Storing_Dates_and_Times_in_Files
         {
             var speaker = GetSpeaker();
 
-            var csv = "Title,Speaker,Length,ScjeduledAt"+ Environment.NewLine;
+            var csv = "Title,Speaker,Length,ScheduledAt" + Environment.NewLine;
 
             var userOffset = TimeSpan.FromHours(-11);
 

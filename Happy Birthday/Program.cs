@@ -12,8 +12,19 @@ namespace Happy_Birthday
             var speaker = GetSpeaker();
 
             var age = GetSpeakerAge(speaker);
-            Console.WriteLine(age);
-            Console.WriteLine(GetDaysUntilBirthday(speaker));
+
+            WriteLine(age);
+
+            var daysUntilBirthday = GetDaysUntilBirthday(speaker);
+
+            if(daysUntilBirthday == 0)
+            {
+                WriteLine("Happy Birthday!");
+            }
+            else
+            {
+                WriteLine($"Don't forget to congratulate the speaker in {daysUntilBirthday} days!");
+            }
         }
 
         public static int GetSpeakerAge(Speaker speaker)
@@ -22,10 +33,11 @@ namespace Happy_Birthday
 
             var age = today.Year - speaker.Birthday.Year;
 
-            if (speaker.Birthday.Date >= today.Date.AddYears(-age))
+            if(speaker.Birthday.Date > today.Date.AddYears(-age))
             {
-                age--;
-            };
+                age = age - 1;
+            }
+
             return age;
         }
 
@@ -36,15 +48,14 @@ namespace Happy_Birthday
 
             birthday = birthday.AddDays(speaker.Birthday.Day - 1);
 
-            if (birthday < today)
+            if(birthday < today)
             {
-                birthday.AddYears(1);
+                birthday = new DateTime(today.Year + 1, speaker.Birthday.Month, 1);
+                birthday = birthday.AddDays(speaker.Birthday.Day - 1);
             }
 
             return (int)(birthday - today).TotalDays;
-//            birthday.da
         }
-
 
         public static Speaker GetSpeaker()
         {
